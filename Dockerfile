@@ -11,4 +11,5 @@ RUN useradd -r -u 1001 -g root nonroot
 RUN chown -R nonroot /app
 USER nonroot
 ENV PORT=8080
+EXPOSE 8080
 CMD /app/main
