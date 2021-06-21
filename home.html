@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      body {
+        width: 100vw;
+        height: 100vh;
+        background: linear-gradient(
+          135deg,
+          hsl(170deg, 80%, 70%),
+          hsl(190deg, 80%, 70%),
+          hsl(250deg, 80%, 70%),
+          hsl(320deg, 80%, 70%)
+        );
+        background-size: 200% 200%;
+        animation: gradient-move 15s ease alternate infinite;
+      }
+
+      @keyframes gradient-move {
+        0% {
+          background-position: 0% 0%;
+        }
+        100% {
+          background-position: 100% 100%;
+        }
+      }
+      
+      	html, body {
+    	height: 100%;
+	}
+
+	html {
+	display: table;
+    	margin: auto;
+	}
+
+	body {
+    	display: table-cell;
+    	vertical-align: middle;
+	}
+	
+      	p {text-align: center;
+      	font-size: large;
+      	}
+    </style>
+  </head>
+  <body>
+  	<p style="font-family: OCR A Std, monospace">Hello! Welcome to my containerized web server in Golang!</p> 		<br><br>
+  	<p style="font-family:Avantgarde, TeX Gyre Adventor, URW Gothic L, sans-serif;
+  		font-size: 30px;">Today's date is {{.Date}}<br>and the time is {{.Time}}</p>
+  </body>
+</html>
