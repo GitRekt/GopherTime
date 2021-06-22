@@ -1,0 +1,22 @@
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: Gophy-deployment
+  labels:
+    app: gophy
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gophy
+  template:
+    metadata:
+      labels:
+        app: gophy
+    spec:
+      containers:
+        - image: k8sbreaker/gophertime
+          name: gophertime
+          resources: {}
+status: {}
